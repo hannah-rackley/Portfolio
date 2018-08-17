@@ -1,0 +1,180 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color:rgb(53,67,79);
+    margin: 0;
+    font-family: 'Carter One', cursive;
+    color: white;
+}
+
+.navbar-options {
+    display: flex;
+}
+.name {
+    margin-bottom: 0;
+}
+
+.gray-box {
+    border-right: rgb(53,67,79) solid 1px;
+    padding-left: 0.7em;
+    padding-right: 0.7em;
+}
+.gray-box-left {
+    padding-left: 0.7em;
+    padding-right: 0.7em;
+}
+
+.atl-photo {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    background-color: rgb(229,116,108);
+    color: rgb(53,67,79);
+    margin: 0;
+    font-family: 'M PLUS 1p', sans-serif;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.first-container, .second-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.all-cards {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-container {
+    cursor: pointer;
+    perspective: 600;
+    height: 20em;
+    position: relative;
+    min-width: 48%;
+    margin: 0.5em;
+    -webkit-min-logical-height: min-content;
+}
+
+.card {
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: all 1s ease-in-out;
+    width: 100%;
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+}
+.personal {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(53,67,79);
+}
+
+.profile-photo {
+    border-radius: 1%;
+    margin-top: 1em;
+    /* border: #00e5ff inset 1em; */
+}
+
+.card .side {
+    backface-visibility: hidden;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    /* background-color: rgba(255, 255, 255, 0.3); */
+}
+
+.card .back {
+    background-color: rgb(224,217,211);
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    color: rgb(229,116,108);
+}
+
+.first {
+    border: rgb(200,166, 135) solid 0.2em;
+}
+
+.second {
+    border: rgb(229,116,108) solid 0.2em;
+}
+
+/* .first > .side {
+    background-color: rgba(229,116,108, 0.5);
+} */
+
+.spacer {
+    flex-grow: 1;
+}
+
+.contact {
+    font-family: 'M PLUS 1p', sans-serif;
+    background-color: rgb(229,116,108);
+    text-align: center;
+    margin: 0;
+    color: rgb(53,67,79);
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+@media(min-width: 550px) {
+    .first-container, .second-container {
+        flex-direction: row;
+        padding: 0.2em;
+        justify-content: space-between;
+    }
+    .second-container .first {
+        border: rgb(229,116,108) solid 0.2em;
+    }
+
+    .second-container .second {
+        border: rgb(200,166, 135) solid 0.2em;
+    }
+    .header-content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .name {
+        margin-bottom: auto;
+    }
+}
+
+@media(min-width: 1024px) {
+    .card-container {
+        height: 30em;
+    }
+    .atl-photo {
+        margin-left: 2em;
+        margin-right: 2em;
+    }
+}
+
+@media(min-width: 1200px) {
+    .atl-photo {
+        margin-left: 4.5em;
+        margin-right: 4.5em;
+    }
+}
