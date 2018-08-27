@@ -1,10 +1,14 @@
-const cardModal = document.querySelector('.card-modal');
-let cards = document.querySelectorAll('.front');
+let cards = document.querySelectorAll('.card');
+let backs = document.querySelectorAll('.back');
+let fronts = document.querySelectorAll('.front');
 
 console.log(cards);
 
 cards.forEach(function(card) {
-    card.addEventListener('mouseover', function(event) {
-        console.log(event.currentTarget);
+    card.addEventListener('click', function(event) {
+        // console.log(event.currentTarget.parentElement.parentElement);
+        card.classList.toggle('flip');
+        card.parentElement.classList.toggle('expand');
+        // card.remove()
     })
 })

@@ -3,11 +3,23 @@ html, body {
     height: 100%;
     display: flex;
     flex-direction: column;
-    background-color:rgb(53,67,79);
+    /* background-color:rgb(53,67,79); */
     margin: 0;
     font-family: 'Carter One', cursive;
-    color: white;
+    
+    /* color: white; */
 }
+
+/* .absolute {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    z-index: 1;
+}
+
+.relative {
+    position: relative;
+} */
 
 .navbar-options {
     display: flex;
@@ -27,16 +39,31 @@ html, body {
     padding-right: 0.7em;
 }
 
-.atl-photo {
+.photo {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    /* font-family: 'Calligraffitti', cursive; */
+    background-image: url('milkovi-397631-unsplash.jpg');
+    font-weight: bold;
+    /* min-height: 800px; */
+    width: 100%;
+    position: relative;
 }
 
+.center-text {
+    position: absolute;
+    align-self: center;
+}
 .header {
-    background-color: rgb(229,116,108);
-    color: rgb(53,67,79);
+    /* background-color: rgb(229,116,108); */
+    /* color: rgb(53,67,79); */
     margin: 0;
     font-family: 'M PLUS 1p', sans-serif;
+    background-color: rgb(255, 255, 255, 0.4);
+    position: sticky;
+    top: 0;
+    width: 100%;
 }
 
 .header-content {
@@ -76,15 +103,16 @@ html, body {
     width: 100%;
 }
 
-.card:hover {
+.flip {
     transform: rotateY(180deg);
 }
+
 .personal {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(53,67,79);
+    /* background-color: rgb(53,67,79); */
 }
 
 .font-two {
@@ -102,36 +130,44 @@ html, body {
     backface-visibility: hidden;
     height: 100%;
     position: absolute;
-    overflow: hidden;
+    overflow: scroll;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
     /* background-color: rgba(255, 255, 255, 0.3); */
+    background-color: rgba(45, 60, 70);
 }
 
 .card .back {
-    background-color: rgb(224,217,211);
+    /* background-color: rgb(243, 228, 13); */
     transform: rotateY(180deg);
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    color: rgb(229,116,108);
+    /* align-items: flex-start; */
+    /* justify-content: space-around; */
+    /* color: rgb(229,116,108); */
 }
 
-.first {
-    border: rgb(200,166, 135) solid 0.2em;
+.card > .first {
+    background-color: rgb(243, 228, 13)
+}
+.card > .second {
+    background-color: rgb(204, 94, 57);
+}
+.card > .third {
+    background-color: rgb(152, 166, 168)
+}
+.card > .fourth {
+    background-color: rgb(205, 192, 186);
 }
 
-.second {
-    border: rgb(229,116,108) solid 0.2em;
+.expand {
+    width: 100%;
+    display: block;
+    position: static;
 }
-
-/* .first > .side {
-    background-color: rgba(229,116,108, 0.5);
-} */
 
 .spacer {
     flex-grow: 1;
@@ -139,12 +175,24 @@ html, body {
 
 .contact {
     font-family: 'M PLUS 1p', sans-serif;
-    background-color: rgb(229,116,108);
+    /* background-color: rgb(229,116,108); */
     text-align: center;
     margin: 0;
-    color: rgb(53,67,79);
+    /* color: rgb(53,67,79); */
     font-weight: bold;
     font-size: 1.2em;
+}
+
+.open {
+    display: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    /* background-color: rgb(53,67,79); */
 }
 
 @media(min-width: 550px) {
@@ -152,13 +200,6 @@ html, body {
         flex-direction: row;
         padding: 0.2em;
         justify-content: space-between;
-    }
-    .second-container .first {
-        border: rgb(229,116,108) solid 0.2em;
-    }
-
-    .second-container .second {
-        border: rgb(200,166, 135) solid 0.2em;
     }
     .header-content {
         flex-direction: row;
