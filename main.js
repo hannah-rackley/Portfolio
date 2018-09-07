@@ -6,15 +6,13 @@ console.log(cards);
 
 let toggleRemainingCardPositions = (currentCard, card) => {
     if (currentCard !== card) {
-        currentCard.parentElement.classList.toggle('none')
+        currentCard.classList.toggle('none')
     }
 }
 
 cards.forEach((card) => {
     card.addEventListener('click', function(event) {
-        card.parentElement.classList.toggle('expand');
-        card.classList.toggle('flip');
-        card.parentElement.classList.toggle('flex');
+        card.classList.toggle('expand');
         cards.forEach(currentCard => {
             toggleRemainingCardPositions(currentCard, card);
         })
