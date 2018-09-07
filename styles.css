@@ -96,8 +96,13 @@ i {
     width: 90%;
     height: 30em;
     overflow: scroll;
-    padding: 3em 15em;
+    padding: 2em 15em;
 } 
+
+.contact.expand {
+    height: 20em;
+    padding: 6em;
+}
 
 .personal {
     color: white;
@@ -139,7 +144,7 @@ i {
       1px 1px 0 #000;
 }
 
-.one {
+.first {
     background-color: rgba(175, 197, 208, 1);
     color: rgb(53,67,79);
  }
@@ -147,7 +152,7 @@ i {
     background-color: rgba(247, 234, 50, 1);
     color: rgb(53,67,79);
 }
-.three {
+.third {
     background-color: rgba(229, 93, 45, 1);
     color: white;
 
@@ -161,11 +166,14 @@ i {
     font-family: 'M PLUS 1p', sans-serif;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    padding: 3em 0;
     margin: 0;
     font-weight: bold;
     font-size: 1em;
     color: white;
     background-color:rgb(43, 70, 85);
+
     /* position: sticky;
     bottom: 0; */
 }
