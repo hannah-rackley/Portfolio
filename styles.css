@@ -11,19 +11,26 @@ html, body {
     flex-direction: column;
     margin: 0;
     font-family: 'M PLUS 1p', sans-serif;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgb(43, 70, 85);
+}
+
+a {
+    text-decoration: none;
+    color: white;
 }
 
 .navbar-options {
     display: flex;
 }
+
 .name {
     margin-bottom: 0;
     font-weight: bold;
 }
 
 .gray-box {
-    border-right: rgb(53,67,79) solid 1px;
+    /* border-right: rgb(53,67,79) solid 1px; */
+    border-right: rgb(255, 255, 255) solid 1px;
     padding-left: 0.7em;
     padding-right: 0.7em;
 }
@@ -45,12 +52,20 @@ html, body {
 .center-text {
     position: absolute;
     align-self: center;
+    color: white;
+    text-shadow:
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
 }
 
 .header {
     margin: 0;
     font-family: 'M PLUS 1p', sans-serif;
-    background-color: rgba(255, 255, 255, 0.9);
+    /* background-color: rgba(255, 255, 255, 0.9); */
+    background-color: rgba(43, 70, 85, 0.5);
+    color: white;
     top: 0;
     width: 100%;
     position: sticky;
@@ -74,38 +89,22 @@ html, body {
 .all-cards {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
-.card-container {
-    cursor: pointer;
-    perspective: 600;
-    height: 20em;
-    position: relative;
-    min-width: 48%;
-    margin: 0.5em;
-    -webkit-min-logical-height: min-content;
-    transition: all 0.5s ease-in;
-}
-
-.flex {
+/* .first-container.flex, .second-container.flex {
     display: flex;
     flex-direction: column;
-}
+} */
 
-.none {
+.card.none {
     display: none;
-    transition-duration: 1s;
-}
-.card {
-    height: 100%;
-    position: absolute;
-    transform-style: preserve-3d;
-    transition: all 1s ease-in-out;
-    width: 100%;
 }
 
-.flip {
-    transform: rotateY(180deg);
+.card.expand {
+    width: 100%;
+    height: 30em;
+    margin: 5em 8em;
 }
 
 .personal {
@@ -125,54 +124,34 @@ html, body {
     max-width: 400px;
 }
 
-.card .side {
-    backface-visibility: hidden;
-    height: 100%;
-    position: absolute;
-    overflow: scroll;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    background-color: rgba(45, 60, 70);
-}
-
-.card .back {
-    transform: rotateY(180deg);
+.card {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    overflow: scroll;
+    height: 20em;
+    padding: 2em;
+    width: 45%;
+    margin: 2em;
+    /* transition: all 0.2s ease-in-out; */
 }
 
-.card > .first {
-    background-color: rgba(152, 166, 168, 0.8);
-    /* color: rgb(53,67,79); */
+.one {
+    background-color: rgba(175, 197, 208, 1);
     color: rgba(0, 0, 0, 0.5);
-    /* color: white;
-    text-shadow:
-     -1px -1px 0 #000,  
-      1px -1px 0 #000,
-      -1px 1px 0 #000,
-       1px 1px 0 #000; */
 }
-.card > .second {
-    background-color: rgba(204, 94, 57, 0.8);
+.two {
+    background-color: rgba(229, 93, 45, 1);
     color: rgb(53,67,79);
 }
-.card > .third {
-    background-color: rgba(243, 228, 13, 0.8);
+.three {
+    background-color: rgba(247, 234, 50, 1);
     color: rgb(53,67,79);
 }
-.card > .fourth {
-    /* background-color: rgba(53,67,79, 0.4); */
-    background-color: rgba(205, 192, 186, 0.8); 
-    /* background-color: white; */
+.four {
+    background-color: rgba(228, 218, 207, 1); 
     color: rgb(53,67,79);
-}
-
-.expand {
-    width: 100%;
-    height: 50em;
 }
 
 .spacer {
@@ -181,29 +160,25 @@ html, body {
 
 .contact {
     font-family: 'M PLUS 1p', sans-serif;
+    display: flex;
+    flex-direction: column;
     text-align: center;
     margin: 0;
     font-weight: bold;
-    font-size: 1.2em;
-    background-color: white;
+    font-size: 1em;
+    color: white;
+    background-color:rgb(43, 70, 85);
 }
 
-.open {
-    display: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    z-index: 1;
-    /* background-color: rgb(53,67,79); */
+.footer-contact-info {
+    display: flex;
+    justify-content: space-between;
 }
 
 @media(min-width: 550px) {
     .first-container, .second-container {
         flex-direction: row;
-        padding: 0.2em;
+        /* padding: 0.2em; */
         justify-content: space-between;
     }
     .header-content {
@@ -216,16 +191,13 @@ html, body {
 }
 
 @media(min-width: 1024px) {
-    .card-container {
-        height: 30em;
-    }
     .atl-photo {
         margin-left: 2em;
         margin-right: 2em;
     }
     .expand {
-        margin: 1em;
-        height: 40em;
+        margin: 3em;
+        /* height: 40em; */
     }
 }
 
@@ -235,6 +207,6 @@ html, body {
         margin-right: 4.5em;
     }
     .expand {
-        margin: 2em;
+        margin: 5em;
     }
 }
