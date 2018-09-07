@@ -19,6 +19,10 @@ a {
     color: white;
 }
 
+i {
+    font-size: 2em;
+}
+
 .navbar-options {
     display: flex;
 }
@@ -81,33 +85,26 @@ a {
     font-size: 1.2em;
 }
 
-.first-container, .second-container {
-    display: flex;
-    flex-direction: column;
-}
-
 .all-cards {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
 }
-
-/* .first-container.flex, .second-container.flex {
-    display: flex;
-    flex-direction: column;
-} */
 
 .card.none {
     display: none;
 }
 
 .card.expand {
-    width: 100%;
-    height: 30em;
-    margin: 5em 8em;
+    width: 90%;
+    height: 40em;
+    overflow: scroll;
+    padding: 3em 15em;
 }
 
 .personal {
+    color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -129,29 +126,34 @@ a {
     flex-direction: column;
     align-items: center;
     cursor: pointer;
-    overflow: scroll;
-    height: 20em;
-    padding: 2em;
-    width: 45%;
-    margin: 2em;
-    /* transition: all 0.2s ease-in-out; */
+    overflow: hidden;
+    height: 3.5em;
+    padding: 2em 10em;
+    width: 100%;
+    margin: 1em 0 0 0;
+    transition: all 0.5s ease-in-out; 
 }
 
 .one {
     background-color: rgba(175, 197, 208, 1);
-    color: rgba(0, 0, 0, 0.5);
+    /* color: rgb(53,67,79); */
+    color: white;
 }
 .two {
-    background-color: rgba(229, 93, 45, 1);
-    color: rgb(53,67,79);
+    background-color: rgba(247, 234, 50, 1);
+    /* color: rgb(53,67,79); */
+    color: white;
 }
 .three {
-    background-color: rgba(247, 234, 50, 1);
-    color: rgb(53,67,79);
+    background-color: rgba(229, 93, 45, 1);
+    /* background-color: rgba(228, 218, 207, 1);  */
+    /* color: rgb(53,67,79); */
+    color: white;
 }
 .four {
-    background-color: rgba(228, 218, 207, 1); 
-    color: rgb(53,67,79);
+    background-color: rgba(229, 93, 45, 1);
+    /* color: rgb(53,67,79); */
+    color: white;
 }
 
 .spacer {
@@ -168,19 +170,17 @@ a {
     font-size: 1em;
     color: white;
     background-color:rgb(43, 70, 85);
+    /* position: sticky;
+    bottom: 0; */
 }
 
 .footer-contact-info {
     display: flex;
     justify-content: space-between;
+    margin: 2em;
 }
 
 @media(min-width: 550px) {
-    .first-container, .second-container {
-        flex-direction: row;
-        /* padding: 0.2em; */
-        justify-content: space-between;
-    }
     .header-content {
         flex-direction: row;
         justify-content: space-between;

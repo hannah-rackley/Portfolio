@@ -1,12 +1,11 @@
 let cards = document.querySelectorAll('.card');
-let backs = document.querySelectorAll('.back');
-let fronts = document.querySelectorAll('.front');
-
-console.log(cards);
+let navOptions = document.querySelectorAll('.option');
 
 let toggleRemainingCardPositions = (currentCard, card) => {
     if (currentCard !== card) {
-        currentCard.classList.toggle('none')
+        if (currentCard.classList.contains('expand')) {
+            currentCard.classList.remove('expand')
+        }
     }
 }
 
@@ -16,5 +15,18 @@ cards.forEach((card) => {
         cards.forEach(currentCard => {
             toggleRemainingCardPositions(currentCard, card);
         })
+    })
+})
+
+let options = {
+    ABOUT: "one",
+    PROJECTS: "two",
+    SKILLS: "three"
+}
+
+navOptions.forEach((option) => {
+    option.addEventListener('click', (event) => {
+        let card = document.querySelector(`.${options[option.textContent]}`);
+        card.classList.toggle('expand');
     })
 })
