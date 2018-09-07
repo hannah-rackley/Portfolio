@@ -4,6 +4,7 @@
     --yellow-color: rgb(243, 228, 13);
     --orange-color: rgb(204, 94, 57);
 }
+
 html, body {
     width: 100%;
     height: 100%;
@@ -20,7 +21,7 @@ a {
 }
 
 i {
-    font-size: 2em;
+    font-size: 3em;
 }
 
 .navbar-options {
@@ -47,7 +48,7 @@ i {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-image: url('milkovi-397631-unsplash.jpg');
+    /* background-image: url('photos/milkovi-397631-unsplash.jpg'); */
     font-weight: bold;
     width: 100%;
     position: relative;
@@ -98,7 +99,7 @@ i {
 
 .card.expand {
     width: 90%;
-    height: 40em;
+    height: 30em;
     overflow: scroll;
     padding: 3em 15em;
 }
@@ -116,9 +117,9 @@ i {
 }
 
 .profile-photo {
-    border-radius: 1%;
+    border-radius: 25%;
     margin-top: 1em;
-    max-width: 400px;
+    max-width: 200px;
 }
 
 .card {
@@ -134,26 +135,32 @@ i {
     transition: all 0.5s ease-in-out; 
 }
 
+.outline {
+    color: white;
+    text-shadow:
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,
+     -1px 1px 0 #000,
+      1px 1px 0 #000;
+}
+
 .one {
     background-color: rgba(175, 197, 208, 1);
-    /* color: rgb(53,67,79); */
-    color: white;
+    color: rgb(53,67,79);
+    /* color: white; */
 }
 .two {
     background-color: rgba(247, 234, 50, 1);
-    /* color: rgb(53,67,79); */
-    color: white;
+    color: rgb(53,67,79);
+    /* color: white; */
+
 }
 .three {
     background-color: rgba(229, 93, 45, 1);
     /* background-color: rgba(228, 218, 207, 1);  */
     /* color: rgb(53,67,79); */
     color: white;
-}
-.four {
-    background-color: rgba(229, 93, 45, 1);
-    /* color: rgb(53,67,79); */
-    color: white;
+
 }
 
 .spacer {
@@ -187,6 +194,9 @@ i {
     }
     .name {
         margin-bottom: auto;
+    }
+    .card {
+        width: fill-available;
     }
 }
 
