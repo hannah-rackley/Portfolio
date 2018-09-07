@@ -187,7 +187,7 @@ i {
     margin: 2em;
 }
 
-@media(min-width: 550px) {
+@media screen and (min-width: 550px) {
     .header-content {
         flex-direction: row;
         justify-content: space-between;
@@ -200,7 +200,7 @@ i {
     }
 }
 
-@media(min-width: 1024px) {
+@media screen and (min-width: 1024px) {
     .atl-photo {
         margin-left: 2em;
         margin-right: 2em;
@@ -211,7 +211,7 @@ i {
     }
 }
 
-@media(min-width: 1200px) {
+@media screen and (min-width: 1200px) {
     .atl-photo {
         margin-left: 4.5em;
         margin-right: 4.5em;
