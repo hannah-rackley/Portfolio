@@ -1,5 +1,6 @@
 let cards = document.querySelectorAll('.card');
 let navOptions = document.querySelectorAll('.option');
+let contact = document.querySelector('.contact');
 
 let toggleRemainingCardPositions = (currentCard, card) => {
     if (currentCard !== card) {
@@ -12,6 +13,7 @@ let toggleRemainingCardPositions = (currentCard, card) => {
 
 cards.forEach((card) => {
     card.addEventListener('click', function(event) {
+        contact.classList.remove('expand');
         card.scrollTop = 0;
         card.classList.toggle('expand');
         cards.forEach(currentCard => {
@@ -21,18 +23,26 @@ cards.forEach((card) => {
 })
 
 let options = {
-    ABOUT: "one",
-    PROJECTS: "two",
-    SKILLS: "three"
+    ABOUT: "first",
+    PROJECTS: "second",
+    SKILLS: "third"
 }
 
 navOptions.forEach((option) => {
     option.addEventListener('click', (event) => {
-        let card = document.querySelector(`.${options[option.textContent]}`);
-        card.scrollTop = 0;
-        card.classList.toggle('expand');
-        cards.forEach(currentCard => {
-            toggleRemainingCardPositions(currentCard, card);
-        })
+        if (option.textContent !== 'CONTACT') {
+            contact.classList.remove('expand');
+            let card = document.querySelector(`.${options[option.textContent]}`);
+            card.scrollTop = 0;
+            card.classList.toggle('expand');
+            cards.forEach(currentCard => {
+                toggleRemainingCardPositions(currentCard, card);
+            })
+        } else {
+            contact.classList.toggle('expand');
+            cards.forEach((card) => {
+                card.classList.remove('expand');
+            })
+        }
     })
 })
