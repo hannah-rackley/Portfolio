@@ -4,6 +4,7 @@
     --yellow-color: rgb(243, 228, 13);
     --orange-color: rgb(204, 94, 57);
 }
+
 html, body {
     width: 100%;
     height: 100%;
@@ -11,19 +12,30 @@ html, body {
     flex-direction: column;
     margin: 0;
     font-family: 'M PLUS 1p', sans-serif;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgb(43, 70, 85);
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+i {
+    font-size: 3em;
 }
 
 .navbar-options {
     display: flex;
 }
+
 .name {
     margin-bottom: 0;
     font-weight: bold;
-}
+} 
 
 .gray-box {
-    border-right: rgb(53,67,79) solid 1px;
+    /* border-right: rgb(53,67,79) solid 1px; */
+    border-right: rgb(255, 255, 255) solid 1px;
     padding-left: 0.7em;
     padding-right: 0.7em;
 }
@@ -36,8 +48,8 @@ html, body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-image: url('milkovi-397631-unsplash.jpg');
-    font-weight: bold;
+    /* background-image: url('photos/milkovi-397631-unsplash.jpg'); */
+    /* font-weight: bold; */
     width: 100%;
     position: relative;
 }
@@ -45,12 +57,20 @@ html, body {
 .center-text {
     position: absolute;
     align-self: center;
+    color: white;
+    text-shadow:
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
 }
 
 .header {
     margin: 0;
     font-family: 'M PLUS 1p', sans-serif;
-    background-color: rgba(255, 255, 255, 0.9);
+    /* background-color: rgba(255, 255, 255, 0.9); */
+    background-color: rgba(43, 70, 85, 0.5);
+    color: white;
     top: 0;
     width: 100%;
     position: sticky;
@@ -66,49 +86,26 @@ html, body {
     font-size: 1.2em;
 }
 
-.first-container, .second-container {
-    display: flex;
-    flex-direction: column;
-}
-
 .all-cards {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
-.card-container {
-    cursor: pointer;
-    perspective: 600;
+.card.expand {
+    width: 90%;
+    height: 30em;
+    overflow: scroll;
+    padding: 2em 15em;
+} 
+
+.contact.expand {
     height: 20em;
-    position: relative;
-    min-width: 48%;
-    margin: 0.5em;
-    -webkit-min-logical-height: min-content;
-    transition: all 0.5s ease-in;
-}
-
-.flex {
-    display: flex;
-    flex-direction: column;
-}
-
-.none {
-    display: none;
-    transition-duration: 1s;
-}
-.card {
-    height: 100%;
-    position: absolute;
-    transform-style: preserve-3d;
-    transition: all 1s ease-in-out;
-    width: 100%;
-}
-
-.flip {
-    transform: rotateY(180deg);
+    padding: 6em;
 }
 
 .personal {
+    color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -120,60 +117,46 @@ html, body {
 }
 
 .profile-photo {
-    border-radius: 1%;
+    border-radius: 25%;
     margin-top: 1em;
-    max-width: 400px;
+    max-width: 200px;
 }
 
-.card .side {
-    backface-visibility: hidden;
-    height: 100%;
-    position: absolute;
-    overflow: scroll;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    background-color: rgba(45, 60, 70);
-}
-
-.card .back {
-    transform: rotateY(180deg);
+.card {
     display: flex;
     flex-direction: column;
-}
-
-.card > .first {
-    background-color: rgba(152, 166, 168, 0.8);
-    /* color: rgb(53,67,79); */
-    color: rgba(0, 0, 0, 0.5);
-    /* color: white;
-    text-shadow:
-     -1px -1px 0 #000,  
-      1px -1px 0 #000,
-      -1px 1px 0 #000,
-       1px 1px 0 #000; */
-}
-.card > .second {
-    background-color: rgba(204, 94, 57, 0.8);
-    color: rgb(53,67,79);
-}
-.card > .third {
-    background-color: rgba(243, 228, 13, 0.8);
-    color: rgb(53,67,79);
-}
-.card > .fourth {
-    /* background-color: rgba(53,67,79, 0.4); */
-    background-color: rgba(205, 192, 186, 0.8); 
-    /* background-color: white; */
-    color: rgb(53,67,79);
-}
-
-.expand {
+    align-items: center;
+    cursor: pointer;
+    overflow-y: hidden;
+    height: 3.5em;
+    padding: 2em 10em;
     width: 100%;
-    height: 50em;
+    margin: 1em 0 0 0;
+    transition: all 0.5s ease-in-out; 
 }
+
+.outline {
+    color: white;
+    text-shadow:
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,
+     -1px 1px 0 #000,
+      1px 1px 0 #000;
+}
+
+.first {
+    background-color: rgba(175, 197, 208, 1);
+    color: rgb(53,67,79);
+ }
+.second {
+    background-color: rgba(247, 234, 50, 1);
+    color: rgb(53,67,79);
+}
+.third {
+    background-color: rgba(229, 93, 45, 1);
+    color: white;
+
+} 
 
 .spacer {
     flex-grow: 1;
@@ -181,31 +164,27 @@ html, body {
 
 .contact {
     font-family: 'M PLUS 1p', sans-serif;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3em 0;
     margin: 0;
     font-weight: bold;
-    font-size: 1.2em;
-    background-color: white;
+    font-size: 1em;
+    color: white;
+    background-color:rgb(43, 70, 85);
+
+    /* position: sticky;
+    bottom: 0; */
 }
 
-.open {
-    display: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    z-index: 1;
-    /* background-color: rgb(53,67,79); */
+.footer-contact-info {
+    display: flex;
+    justify-content: space-between;
+    margin: 2em;
 }
 
-@media(min-width: 550px) {
-    .first-container, .second-container {
-        flex-direction: row;
-        padding: 0.2em;
-        justify-content: space-between;
-    }
+@media screen and (min-width: 550px) {
     .header-content {
         flex-direction: row;
         justify-content: space-between;
@@ -213,28 +192,27 @@ html, body {
     .name {
         margin-bottom: auto;
     }
+    .card {
+        width: fill-available;
+    }
 }
 
-@media(min-width: 1024px) {
-    .card-container {
-        height: 30em;
-    }
+@media screen and (min-width: 1024px) {
     .atl-photo {
         margin-left: 2em;
         margin-right: 2em;
     }
     .expand {
-        margin: 1em;
-        height: 40em;
+        margin: 0 3em;
     }
 }
 
-@media(min-width: 1200px) {
+@media screen and (min-width: 1200px) {
     .atl-photo {
         margin-left: 4.5em;
         margin-right: 4.5em;
     }
     .expand {
-        margin: 2em;
+        margin: 5em;
     }
 }

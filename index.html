@@ -5,97 +5,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Hannah Glasser</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
     <link href="https://fonts.googleapis.com/css?family=Carter+One|Lobster+Two|M+PLUS+1p" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Calligraffitti" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="styles.css"/>
 </head>
 <body>
     <header class="header">
         <div class="header-content">
-            <h2 class="name">HG</h2>
+            <p class="name">HANNAH GLASSER</p>
             <div class="navbar-options">
-                <p class="gray-box">ABOUT</p>
-                <p class="gray-box">PROJECTS</p>
-                <p class="gray-box">SKILLS</p>
-                <p class="gray-box-left">CONTACT</p>
+                <a href="#about"><p class="gray-box option">ABOUT</p></a>
+                <a href="#projects"><p class="gray-box option">PROJECTS</p></a>
+                <a href="#skills"><p class="gray-box option">SKILLS</p></a>
+                <a href="#contact"><p class="gray-box-left option">CONTACT</p></a>
             </div>
         </div>
     </header>
     <main>
         <div class="photo">
-            <img src="milkovi-397631-unsplash.jpg">
+            <img src="photos/milkovi-397631-unsplash.jpg">
             <h1 class='center-text'>HANNAH GLASSER</h1>
         </div>
-        <!-- <div class="personal">
-            <h2>Hello</h2>
-            <p class="font-two">I am a software engineer based in Atlanta, GA.</p>
-        </div> -->
         <div class="all-cards">
-            <div class="first-container">
-                <div class="card-container">
-                    <div class="card">
-                        <div class="side front">
-                            <p>About</p>
-                        </div>
-                        <div class="side back first">
-                            <img src="profile-photo.jpeg" class="profile-photo" alt="Picture of Hannah Glasser in Japan">
-                            <p>My passion for learning how things work and gaining new experiences has led me down a unqiue path. In 2015, I graduated from the University of Georgia with a Bachelor of Science in Agriculture. I worked in a poultry processing plant in Cornelia, GA, before relocating to Atlanta. For 18 months, I honed my ability to work under pressure as a litigation paralegal. I practiced my skills in web development during lunch breaks, nights, and weekends. In June 2018, I started at DigitalCrafts, and began coding full-time.</p>
-                            <p>Why hire me</p>
-                            <p></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-container">
-                    <div class="card">
-                        <div class="side front">
-                            <p>Projects</p>
-                        </div>
-                        <div class="side back second">
-                            <p>Tonely</p>
-                            <p>Penguin Puzzler</p>
-                            <P>Gracie-Gram</P>
-                        </div>
-                    </div>
+            <div class="card first" id="about">
+                <h1 class="outline">About</h1>
+                <div class="content">
+                    <img src="photos/profile-photo.jpeg" class="profile-photo" alt="Picture of Hannah Glasser in Japan">
+                    <p>My passion for learning how things work and gaining new experiences has led me down a unqiue path. In 2015, I graduated from the University of Georgia with a Bachelor of Science in Agriculture. I worked in a poultry processing plant in Cornelia, GA, before relocating to Atlanta. For 18 months, I honed my ability to work under pressure as a litigation paralegal. I practiced my skills in web development during lunch breaks, nights, and weekends. In June 2018, I started at DigitalCrafts, and began coding full-time.</p>
                 </div>
             </div>
-            <div class="second-container">
-                <div class="card-container">
-                    <div class="card">
-                        <div class="side front">
-                            <p>Skills</p> 
-                        </div>
-                        <div class="side back font-two third">
-                            <p>What I Know</p>
-                            <p>HTML, CSS, JavaScript, jQuery, Python, Github</p>
-                            <p>What I'm Learning Now</p>
-                            <p>node.js, RegEx</p>
-                        </div>
+            <div class="card second" id="projects">
+                    <h1 class="outline">Projects</h1>
+                    <div class="content">
+                        <p>In Your Fridge</p>
+                        <p>Tonely</p>
+                        <p>Photo Gallery</p>
+                        <p>Penguin Puzzler</p>
                     </div>
-                </div>
-                <div class="card-container">
-                    <div class="card">
-                        <div class="side front">
-                            <p>Contact Me</p>
-                        </div>
-                        <div class="side back fourth">
-                            <a href="">Github</a>
-                            <a href="">LinkedIn</a>
-                            <a href="">Email</a>
-                            <a href="">Phone</a>
-                        </div>
-                    </div>
+            </div>
+            <div class="card third" id="skills">
+                <h1 class="outline" >Skills</h1>
+                <div class="content">
+                    <p>What I Know</p>
+                    <p><i class="devicon-html5-plain-wordmark"></i> <i class="devicon-css3-plain-wordmark"></i> <i class="devicon-javascript-plain"></i> <i class="devicon-jquery-plain-wordmark"></i> <i class="devicon-python-plain-wordmark"></i> <i class="devicon-git-plain-wordmark"></i> <i class="devicon-github-plain-wordmark"></i>  <i class="devicon-nodejs-plain-wordmark"></i> <i class="devicon-express-original-wordmark"></i> <i class="devicon-amazonwebservices-plain-wordmark"></i> <i class="devicon-postgresql-plain-wordmark"></i></p>
+                    <p>What I'm Learning Now</p>
+                    <p><i class="devicon-react-original-wordmark"></i> Redux</p>
                 </div>
             </div>
         </div>
     </main>
-    <div class="spacer"></div>
     <footer class="contact">
-        <h3>CONTACT ME</h3>
-        <div>
-            <a href="">Github</a>
-            <a href="">LinkedIn</a>
-            <a href="">Email</a>
-            <a href="">Phone</a>
+        <div class="footer-contact-info"  id="contact">
+            <a href="https://github.com/hglasser" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/hannahrglasser?trk=pub-pbmap" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+            <a href="mailto:hrglasser94@gmail.com"><i class="far fa-envelope"></i></a>
+            <a href="tel:1-770-367-7219"><i class="fas fa-phone"></i></a>
+            <a href="HannahGlasser.pdf" target="_blank" rel="noopener noreferrer"><i class="far fa-file"></i></a>
         </div>
     </footer>
     <script src="main.js"></script>

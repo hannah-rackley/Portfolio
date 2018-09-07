@@ -1,22 +1,48 @@
 let cards = document.querySelectorAll('.card');
-let backs = document.querySelectorAll('.back');
-let fronts = document.querySelectorAll('.front');
-
-console.log(cards);
+let navOptions = document.querySelectorAll('.option');
+let contact = document.querySelector('.contact');
 
 let toggleRemainingCardPositions = (currentCard, card) => {
     if (currentCard !== card) {
-        currentCard.parentElement.classList.toggle('none')
+        if (currentCard.classList.contains('expand')) {
+            currentCard.classList.remove('expand')
+            currentCard.scrollTop = 0;
+        }
     }
 }
 
 cards.forEach((card) => {
     card.addEventListener('click', function(event) {
-        card.parentElement.classList.toggle('expand');
-        card.classList.toggle('flip');
-        card.parentElement.classList.toggle('flex');
+        contact.classList.remove('expand');
+        card.scrollTop = 0;
+        card.classList.toggle('expand');
         cards.forEach(currentCard => {
             toggleRemainingCardPositions(currentCard, card);
         })
+    })
+})
+
+let options = {
+    ABOUT: "first",
+    PROJECTS: "second",
+    SKILLS: "third"
+}
+
+navOptions.forEach((option) => {
+    option.addEventListener('click', (event) => {
+        if (option.textContent !== 'CONTACT') {
+            contact.classList.remove('expand');
+            let card = document.querySelector(`.${options[option.textContent]}`);
+            card.scrollTop = 0;
+            card.classList.toggle('expand');
+            cards.forEach(currentCard => {
+                toggleRemainingCardPositions(currentCard, card);
+            })
+        } else {
+            contact.classList.toggle('expand');
+            cards.forEach((card) => {
+                card.classList.remove('expand');
+            })
+        }
     })
 })
