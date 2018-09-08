@@ -232,7 +232,12 @@ i {
         margin-bottom: auto;
     }
     .card {
-        width: fill-available;
+        width: 100%;
+        padding: 2em 0;
+    }
+    .card.expand {
+        padding-right: 0;
+        padding-left: 0;
     }
 }
 
