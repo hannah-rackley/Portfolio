@@ -22,6 +22,7 @@ cards.forEach((card) => {
     })
 })
 
+//Option router - expand when you click on the navigation option in the header
 let options = {
     ABOUT: "first",
     PROJECTS: "second",
