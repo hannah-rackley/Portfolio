@@ -167,11 +167,26 @@ i {
     /* color: white; */
     /* color: rgb(53,67,79); */
     color: black;
-
 } 
 
 .spacer {
     flex-grow: 1;
+}
+
+.project {
+    background-color: rgba(53, 67, 79, 0.9);
+    border: 1px solid white;
+    color: white;
+    margin: 1em;
+    padding: 2em;
+    /* background-color: rgba(255, 255, 255, 0.95); */
+    /* border: 1px solid var(--gray-color); */
+    /* color: var(--gray-color); */
+}
+
+.flex-row {
+    display: flex;
+    justify-content: space-around;
 }
 
 .contact {
