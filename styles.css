@@ -10,6 +10,7 @@ html, body {
     height: 100%;
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
     margin: 0;
     font-family: 'Montserrat', sans-serif;
     /* font-family: 'Nothing You Could Do', cursive; */
@@ -80,7 +81,6 @@ i {
     background-color: rgba(43, 70, 85, 0.5);
     color: white;
     top: 0;
-    width: 100%;
     position: sticky;
     z-index: 1;
 }
@@ -89,9 +89,6 @@ i {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-left: 1em;
-    padding-right: 1em;
-    font-size: 1.2em;
 }
 
 .all-cards {
@@ -101,7 +98,6 @@ i {
 }
 
 .card.expand {
-    width: 90%;
     height: 30em;
     overflow: scroll;
     padding: 2em 15em 5em 15em;
@@ -147,7 +143,7 @@ i {
 
 .videos {
     /* max-width: 80%; */
-    max-height: 500px;
+    max-height: 400px;
     align-self: center;
 }
 .outline {
@@ -224,10 +220,11 @@ i {
     margin: 2em;
 }
 
-@media screen and (min-width: 550px) {
+@media screen and (max-width: 550px) {
     .header-content {
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: center;
+        flex-wrap: wrap;
     }
     .name {
         margin-bottom: auto;
@@ -240,9 +237,12 @@ i {
         padding-right: 0;
         padding-left: 0;
     }
+    .project {
+        padding: 0;
+    }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (max-width: 1024px) {
     .atl-photo {
         margin-left: 2em;
         margin-right: 2em;
@@ -253,7 +253,7 @@ i {
     }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (max-width: 1200px) {
     .atl-photo {
         margin-left: 4.5em;
         margin-right: 4.5em;
