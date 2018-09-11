@@ -1,7 +1,6 @@
 :root {
     --blue-color: rgb(152, 166, 168);
     --gray-color:  rgb(53, 67, 79);
-    --yellow-color: rgb(243, 228, 13);
     --orange-color: rgb(204, 94, 57);
 }
 
@@ -235,7 +234,6 @@ ul {
 .footer-contact-info {
     display: flex;
     justify-content: space-between;
-    margin: 2em;
 }
 
 @media screen and (max-width: 1200px) {
