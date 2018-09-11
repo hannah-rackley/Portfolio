@@ -167,11 +167,6 @@ ul {
     font-size: 1.2em;
 }
 
-.final-element {
-    padding: 0 1em 3em 1em;
-    font-size: 1.2em;
-}
-
 .first {
     background-color: rgb(161, 182, 189);
  }
@@ -200,6 +195,11 @@ ul {
     display: flex;
     justify-content: space-around;
     padding: 0 5em;
+}
+
+.final-element {
+    padding: 0 1em 3em 1em;
+    font-size: 1.2em;
 }
 
 .btn {
