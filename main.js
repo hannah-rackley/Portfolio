@@ -1,11 +1,12 @@
 let navOptions = document.querySelectorAll('.option');
 
-//Option router - expand when you click on the navigation option in the header
+//Option router - Make sure scrollTop is set to zero when you navigate to a section
 let options = {
     ABOUT: "first",
     PROJECTS: "second",
     SKILLS: "third"
 }
+
 
 navOptions.forEach((option) => {
     option.addEventListener('click', (event) => {
