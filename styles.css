@@ -71,6 +71,11 @@ ul {
     font-size: 1.8em;
 }
 
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .header {
     margin: 0;
     background-color: rgba(43, 70, 85, 0.9);
@@ -305,6 +310,9 @@ ul {
     }
     .project {
         padding: 0;
+    }
+    .contact {
+        padding: 1em;
     }
 }
 
