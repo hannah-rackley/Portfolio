@@ -52,12 +52,16 @@ ul {
     position: relative;
     margin: auto;
 }
+
 .title-photo {
     width: 80%;
+    margin-top: 51px;
 }
+
 .absolute {
     position: absolute;
 }
+
 .center-text {
     font-weight: bolder;
     align-self: center;
@@ -65,16 +69,12 @@ ul {
     flex-direction: column;
     align-items: center;
     color: white;
-    text-shadow:
-     -1px -1px 0 #000,  
-      1px -1px 0 #000,
-      -1px 1px 0 #000,
-       1px 1px 0 #000;
+    font-size: 1.8em;
 }
 
 .header {
     margin: 0;
-    background-color: rgba(43, 70, 85, 0.5);
+    background-color: rgba(43, 70, 85, 0.9);
     color: white;
     top: 0;
     right: 0;
@@ -148,11 +148,6 @@ ul {
 
 .outline {
     color: white;
-    text-shadow:
-    -1px -1px 0 #000,  
-     1px -1px 0 #000,
-     -1px 1px 0 #000,
-      1px 1px 0 #000;
     font-size: 2.1em;
 }
 
@@ -213,12 +208,6 @@ ul {
     background-color: white;
 }
 
-.flex-center {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 .flex-row {
     display: flex;
     justify-content: center;
@@ -235,9 +224,8 @@ ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 3em 15em;
+    padding: 1em 15em 3em 15em;
     margin: 0 0 2em 0;
-    /* height: 20em; */
     font-weight: bold;
     font-size: 1em;
     color: white;
@@ -256,7 +244,7 @@ ul {
         margin: 1em 3em 0 3em;
     }
     .contact {
-        padding: 3em 10em;
+        padding: 1em 10em 3em 10em;
     }
 }
 
@@ -293,11 +281,11 @@ ul {
         width: 90%;
     }
     .contact {
-        padding: 4em 0;
+        padding: 1em 4em;
     }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 523px) {
     .videos {
         max-width: 400px;
     }
@@ -315,6 +303,7 @@ ul {
     }
     .title-photo {
         width: 100%;
+        margin-top: 102px;
     }
     .project {
         padding: 0;
