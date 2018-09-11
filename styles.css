@@ -25,21 +25,14 @@ a {
 i {
     font-size: 3em;
 }
+
 ul {
     padding-left: 0;
 }
 
-.final-element {
-    padding: 0 1em 3em 1em;
-}
 .navbar-options {
     display: flex;
 }
-
-.name {
-    margin-bottom: 0;
-    font-weight: bold;
-} 
 
 .gray-box {
     border-right: rgb(255, 255, 255) solid 1px;
@@ -60,7 +53,6 @@ ul {
 }
 
 .center-text {
-    /* font-family: 'Nothing You Could Do', cursive; */
     font-weight: bolder;
     position: absolute;
     align-self: center;
@@ -97,9 +89,17 @@ ul {
 }
 
 .card.expand {
-    height: 30em;
+    height: 28em;
     overflow: scroll;
+}
+
+.card.projects.expand {
+    height: 40em;
 } 
+
+.card.skills.expand {
+    height: 20em;
+}
 
 .contact.expand {
     height: 20em;
@@ -148,6 +148,7 @@ ul {
     max-height: 500px;
     align-self: center;
 }
+
 .outline {
     color: white;
     text-shadow:
@@ -155,28 +156,33 @@ ul {
      1px -1px 0 #000,
      -1px 1px 0 #000,
       1px 1px 0 #000;
+    font-size: 2.1em;
 }
 
 .inner-text {
     padding: 0 1em;
     list-style-type: none;
     margin-bottom: 1em;
+    font-size: 1.2em;
+}
+
+.final-element {
+    padding: 0 1em 3em 1em;
+    font-size: 1.2em;
 }
 
 .first {
     background-color: rgb(161, 182, 189);
  }
+
 .second {
     background-color: rgb(210, 197, 191);
 }
+
 .third {
     background-color: rgba(229, 93, 45, 1);
     color: white;
 } 
-
-.card.skills.expand {
-    height: 20em;
-}
 
 .spacer {
     flex-grow: 1;
@@ -192,13 +198,14 @@ ul {
 .projects-content {
     display: flex;
     justify-content: space-around;
+    padding: 0 5em;
 }
 
 .btn {
     border-radius: 10%;
     color: var(--gray-color);
     padding: 1em;
-    margin-bottom: 1em;
+    margin: 0 0.5em 2em 0;
     border: 2px solid var(--gray-color);
     background-color: rgba(255, 255, 255, 0.9);
 }
@@ -217,14 +224,14 @@ ul {
 
 .flex-row {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: center;
 }
 
 .flex-between {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding: 0 2em;
 }
 
 .contact {
@@ -286,6 +293,7 @@ ul {
     }
     .projects-content {
         flex-direction: column;
+        padding: 0;
     }
     .profile-photo {
         align-self: center;
