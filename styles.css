@@ -48,13 +48,18 @@ ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 100%;
+    align-items: center;
     position: relative;
+    margin: auto;
 }
-
+.title-photo {
+    width: 80%;
+}
+.absolute {
+    position: absolute;
+}
 .center-text {
     font-weight: bolder;
-    position: absolute;
     align-self: center;
     display: flex;
     flex-direction: column;
@@ -96,11 +101,6 @@ ul {
 
 .card.skills {
     height: 20em;
-}
-
-.contact {
-    height: 20em;
-    padding: 6em;
 }
 
 .personal {
@@ -235,8 +235,9 @@ ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 3em 0;
-    margin: 0;
+    padding: 3em 15em;
+    margin: 0 0 2em 0;
+    /* height: 20em; */
     font-weight: bold;
     font-size: 1em;
     color: white;
@@ -250,25 +251,23 @@ ul {
 }
 
 @media screen and (max-width: 1200px) {
-    .atl-photo {
-        margin-left: 4.5em;
-        margin-right: 4.5em;
-    }
     .card {
         padding-bottom: 3em;
         margin: 1em 3em 0 3em;
     }
+    .contact {
+        padding: 3em 10em;
+    }
 }
 
 @media screen and (max-width: 1024px) {
-    .atl-photo {
-        margin-left: 2em;
-        margin-right: 2em;
-    }
     .card {
         margin: 1em 0 0 0;
         padding-bottom: 3em;
-        width: 90%;
+        width: 85%;
+    }
+    .title-photo {
+        width: 85%;
     }
     .about-content {
         flex-direction: column;
@@ -288,7 +287,13 @@ ul {
 
 @media screen and (max-width: 768px) {
     .card {
-        width: 100%;
+        width: 90%;
+    }
+    .title-photo {
+        width: 90%;
+    }
+    .contact {
+        padding: 4em 0;
     }
 }
 
@@ -308,12 +313,11 @@ ul {
         width: 100%;
         padding: 2em 0;
     }
+    .title-photo {
+        width: 100%;
+    }
     .project {
         padding: 0;
-    }
-    .contact {
-        padding: 6em 0;
-        margin-bottom: 2em;
     }
 }
 
