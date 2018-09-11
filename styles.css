@@ -99,14 +99,6 @@ ul {
     align-items: center;
 }
 
-.card.projects {
-    height: 40em;
-} 
-
-.card.skills {
-    height: 20em;
-}
-
 .personal {
     color: white;
     display: flex;
@@ -130,7 +122,6 @@ ul {
     padding: 2em 0;
     width: 80%;
     margin: 1em 0 0 0;
-    height: 28em;
     overflow: scroll;
 }
 
@@ -190,11 +181,6 @@ ul {
     display: flex;
     justify-content: space-around;
     padding: 0 5em;
-}
-
-.final-element {
-    padding: 0 1em 3em 1em;
-    font-size: 1.2em;
 }
 
 .btn {
