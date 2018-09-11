@@ -25,6 +25,9 @@ a {
 i {
     font-size: 3em;
 }
+ul {
+    padding-left: 0;
+}
 
 .final-element {
     padding: 0 1em 3em 1em;
