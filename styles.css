@@ -48,13 +48,18 @@ ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 100%;
+    align-items: center;
     position: relative;
+    margin: auto;
 }
-
+.title-photo {
+    width: 80%;
+}
+.absolute {
+    position: absolute;
+}
 .center-text {
     font-weight: bolder;
-    position: absolute;
     align-self: center;
     display: flex;
     flex-direction: column;
@@ -72,7 +77,9 @@ ul {
     background-color: rgba(43, 70, 85, 0.5);
     color: white;
     top: 0;
-    position: sticky;
+    right: 0;
+    left: 0;
+    position: fixed;
     z-index: 1;
 }
 
@@ -88,22 +95,12 @@ ul {
     align-items: center;
 }
 
-.card.expand {
-    height: 28em;
-    overflow: scroll;
-}
-
-.card.projects.expand {
+.card.projects {
     height: 40em;
 } 
 
-.card.skills.expand {
+.card.skills {
     height: 20em;
-}
-
-.contact.expand {
-    height: 20em;
-    padding: 6em;
 }
 
 .personal {
@@ -126,12 +123,11 @@ ul {
     flex-direction: column;
     align-items: center;
     cursor: pointer;
-    overflow-y: hidden;
-    height: 3.5em;
     padding: 2em 0;
-    width: 100%;
+    width: 80%;
     margin: 1em 0 0 0;
-    transition: all 0.5s ease-in-out; 
+    height: 28em;
+    overflow: scroll;
 }
 
 .about-content {
@@ -239,8 +235,9 @@ ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 3em 0;
-    margin: 0;
+    padding: 3em 15em;
+    margin: 0 0 2em 0;
+    /* height: 20em; */
     font-weight: bold;
     font-size: 1em;
     color: white;
@@ -254,24 +251,23 @@ ul {
 }
 
 @media screen and (max-width: 1200px) {
-    .atl-photo {
-        margin-left: 4.5em;
-        margin-right: 4.5em;
-    }
-    .card.expand {
+    .card {
         padding-bottom: 3em;
         margin: 1em 3em 0 3em;
+    }
+    .contact {
+        padding: 3em 10em;
     }
 }
 
 @media screen and (max-width: 1024px) {
-    .atl-photo {
-        margin-left: 2em;
-        margin-right: 2em;
-    }
-    .card.expand {
+    .card {
         margin: 1em 0 0 0;
         padding-bottom: 3em;
+        width: 85%;
+    }
+    .title-photo {
+        width: 85%;
     }
     .about-content {
         flex-direction: column;
@@ -286,6 +282,18 @@ ul {
     }
     .videos {
         max-height: 400px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .card {
+        width: 90%;
+    }
+    .title-photo {
+        width: 90%;
+    }
+    .contact {
+        padding: 4em 0;
     }
 }
 
@@ -305,16 +313,11 @@ ul {
         width: 100%;
         padding: 2em 0;
     }
-    .card.expand {
-        padding-right: 0;
-        padding-left: 0;
+    .title-photo {
+        width: 100%;
     }
     .project {
         padding: 0;
-    }
-    .contact.expand {
-        padding: 6em 0;
-        margin-bottom: 2em;
     }
 }
 
