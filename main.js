@@ -1,26 +1,4 @@
-let cards = document.querySelectorAll('.card');
 let navOptions = document.querySelectorAll('.option');
-let contact = document.querySelector('.contact');
-
-// let toggleRemainingCardPositions = (currentCard, card) => {
-//     if (currentCard !== card) {
-//         if (currentCard.classList.contains('expand')) {
-//             currentCard.classList.remove('expand')
-//             currentCard.scrollTop = 0;
-//         }
-//     }
-// }
-
-// cards.forEach((card) => {
-//     card.addEventListener('click', function(event) {
-//         contact.classList.remove('expand');
-//         card.scrollTop = 0;
-//         card.classList.toggle('expand');
-//         cards.forEach(currentCard => {
-//             toggleRemainingCardPositions(currentCard, card);
-//         })
-//     })
-// })
 
 //Option router - expand when you click on the navigation option in the header
 let options = {
