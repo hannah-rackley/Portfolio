@@ -1,7 +1,5 @@
 :root {
-    --blue-color: rgb(152, 166, 168);
     --gray-color:  rgb(53, 67, 79);
-    --orange-color: rgb(204, 94, 57);
 }
 
 html, body {
@@ -12,13 +10,13 @@ html, body {
     box-sizing: border-box;
     margin: 0;
     font-family: 'Montserrat', sans-serif;
-    background-color: rgb(43, 70, 85);
-    color: white;
+    background-color: white;
+    color: var(--gray-color);
 }
 
 a {
     text-decoration: none;
-    color: white;
+    color: var(--gray-color);
 }
 
 i {
@@ -34,7 +32,7 @@ ul {
 }
 
 .gray-box {
-    border-right: rgb(255, 255, 255) solid 1px;
+    border-right: var(--gray-color) solid 1px;
     padding-left: 0.7em;
     padding-right: 0.7em;
 }
@@ -53,12 +51,13 @@ ul {
 }
 
 .title-photo {
-    width: 80%;
+    width: 100%;
     margin-top: 51px;
 }
 
 .absolute {
     position: absolute;
+    color: white;
 }
 
 .center-text {
@@ -67,7 +66,6 @@ ul {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: white;
     font-size: 1.8em;
 }
 
@@ -76,21 +74,26 @@ ul {
     flex-direction: column;
     align-items: center;
 }
+
 .header {
+    background-color: white;
     margin: 0;
-    background-color: rgba(43, 70, 85, 0.9);
-    color: white;
     top: 0;
     right: 0;
     left: 0;
     position: fixed;
     z-index: 1;
+    min-height: 5em;
+    margin: auto;
+    flex-wrap: wrap;
 }
 
 .header-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    font-size: 1.5em;
+    flex-wrap: wrap;
 }
 
 .all-cards {
@@ -99,51 +102,27 @@ ul {
     align-items: center;
 }
 
-.personal {
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.profile-photo {
-    border-radius: 10%;
-    margin-top: 1em;
-    width: 300px;
-    height: 312px;
-}
-
 .card {
     display: flex;
     flex-direction: column;
     align-items: center;
     cursor: pointer;
-    padding: 2em 0;
-    width: 80%;
-    margin: 1em 0 0 0;
+    padding: 1em 0 0 0;
+    width: 100%;
     overflow: scroll;
 }
 
 .about-content {
     display: flex;
     padding: 0 8em;
-}
-
-.content {
-    display: flex;
-    flex-direction: column;
+    background-color: rgba(162, 127, 25, 0.1);
 }
 
 .videos {
     max-height: 500px;
     max-width: 500px;
     align-self: center;
-}
-
-.outline {
-    color: white;
-    font-size: 2.1em;
+    padding: 1em 0;
 }
 
 .inner-text {
@@ -153,34 +132,19 @@ ul {
     font-size: 1.2em;
 }
 
-.first {
-    background-color: rgb(161, 182, 189);
- }
-
-.second {
-    background-color: rgb(210, 197, 191);
-}
-
-.third {
-    background-color: rgba(229, 93, 45, 1);
-    color: white;
-} 
-
 .spacer {
     flex-grow: 1;
 }
 
 .project {
-    background-color: rgba(53, 67, 79, 0.9);
-    border: 1px solid white;
-    color: white;
-    margin: 1em;
-    padding: 2em;
+    padding: 1em;
+    background-color: rgba(162, 127, 25, 0.1);
 }
+
 .projects-content {
     display: flex;
     justify-content: space-around;
-    padding: 0 5em;
+    padding: 0 8em;
 }
 
 .btn {
@@ -188,13 +152,12 @@ ul {
     color: var(--gray-color);
     padding: 1em;
     margin: 0 0.5em 2em 0;
-    border: 2px solid var(--gray-color);
+    border: 2px solid white;
     background-color: rgba(255, 255, 255, 0.9);
 }
 
 .btn:hover {
-    border: 2px solid var(--orange-color);
-    color: var(--orange-color);
+    border: 2px solid var(--gray-color);
     background-color: white;
 }
 
@@ -206,10 +169,13 @@ ul {
 .flex-between {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     padding: 0 2em;
 }
 
+.center {
+    align-self: center;
+}
 .contact {
     display: flex;
     flex-direction: column;
@@ -218,8 +184,6 @@ ul {
     margin: 0 0 2em 0;
     font-weight: bold;
     font-size: 1em;
-    color: white;
-    background-color:rgb(43, 70, 85);
 }
 
 .footer-contact-info {
@@ -241,36 +205,38 @@ ul {
     .card {
         margin: 1em 0 0 0;
         padding-bottom: 3em;
-        width: 85%;
     }
-    .title-photo {
-        width: 85%;
-    }
+
     .about-content {
         flex-direction: column;
-        padding: 0;
+        padding: 0 6em;
     }
+
     .projects-content {
         flex-direction: column;
         padding: 0;
     }
+
     .profile-photo {
         align-self: center;
     }
+
     .videos {
         max-height: 400px;
     }
 }
 
 @media screen and (max-width: 768px) {
-    .card {
-        width: 90%;
-    }
-    .title-photo {
-        width: 90%;
-    }
     .contact {
         padding: 1em 4em;
+    }
+    .header-content {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .about-content {
+        padding: 0 4em;
     }
 }
 
@@ -278,20 +244,10 @@ ul {
     .videos {
         max-width: 400px;
     }
-    .header-content {
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    .name {
-        margin-bottom: auto;
-    }
     .card {
-        width: 100%;
         padding: 2em 0;
     }
     .title-photo {
-        width: 100%;
         margin-top: 102px;
     }
     .project {
@@ -299,6 +255,12 @@ ul {
     }
     .contact {
         padding: 1em;
+    }
+    .header-content {
+        font-size: 1em;
+    }
+    .inner-text {
+        font-size: 1em;
     }
 }
 
