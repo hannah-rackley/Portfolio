@@ -9,7 +9,8 @@ html, body {
     flex-direction: column;
     box-sizing: border-box;
     margin: 0;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-weight: lighter;
     background-color: white;
     color: var(--gray-color);
 }
@@ -29,8 +30,19 @@ ul {
 
 .navbar-options {
     display: flex;
+    font-size: 0.7em;
+    align-self: left;
 }
 
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 100px 2em 0 2em;
+    font-size: 2.5em;
+    flex-wrap: wrap;
+}
 .gray-box {
     border-right: var(--gray-color) solid 1px;
     padding-left: 0.7em;
@@ -76,7 +88,7 @@ ul {
 }
 
 .header {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.9);
     margin: 0;
     top: 0;
     right: 0;
@@ -112,10 +124,17 @@ ul {
     overflow: scroll;
 }
 
+/* .about {
+    width: 50%;
+} */
+
 .about-content {
     display: flex;
     padding: 0 8em;
-    background-color: rgba(162, 127, 25, 0.1);
+    /* background-color: rgba(162, 127, 25, 0.1); */
+    /* background-color: rgb(243, 245, 246); */
+    background-color: white;
+    /* width: 50%; */
 }
 
 .videos {
@@ -136,9 +155,11 @@ ul {
     flex-grow: 1;
 }
 
+.second {
+    background-color: rgb(243, 245, 246);
+}
 .project {
     padding: 1em;
-    background-color: rgba(162, 127, 25, 0.1);
 }
 
 .projects-content {
@@ -149,11 +170,13 @@ ul {
 
 .btn {
     border-radius: 10%;
-    color: var(--gray-color);
+    /* color: var(--gray-color); */
+    color: white;
     padding: 1em;
     margin: 0 0.5em 2em 0;
-    border: 2px solid white;
-    background-color: rgba(255, 255, 255, 0.9);
+    border: 2px solid var(--gray-color);
+    /* background-color: rgba(255, 255, 255, 0.9); */
+    background-color: var(--gray-color);
 }
 
 .btn:hover {
@@ -163,7 +186,8 @@ ul {
 
 .flex-row {
     display: flex;
-    justify-content: center;
+    padding-left: 1em;
+    /* justify-content: center; */
 }
 
 .flex-between {
@@ -182,7 +206,6 @@ ul {
     justify-content: center;
     padding: 1em 15em 3em 15em;
     margin: 0 0 2em 0;
-    font-weight: bold;
     font-size: 1em;
 }
 
